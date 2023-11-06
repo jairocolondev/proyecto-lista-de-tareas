@@ -1,4 +1,3 @@
-// import ParticlesFondo from "./assets/ParticlesFondo";
 import imagenListaDeTareas from "./assets/imagenListaDeTareas.jpg";
 import ListaDeTareas from "./components/ListaDeTareas";
 
@@ -6,7 +5,6 @@ function App() {
   return (
     <>
       <div className="container-aplicacion-tareas">
-        {/* <ParticlesFondo /> */}
         <div className="imagenListaDeTareas">
           <img
             src={imagenListaDeTareas}
