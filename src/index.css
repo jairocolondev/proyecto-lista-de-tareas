@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #313131;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: #ffffff;
+}
+
+.container-aplicacion-tareas {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tareas-listas-principal h1 {
+  font-family: "Outfit", sans-serif;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.imagenListaDeTareas {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Outfit", sans-serif;
+  color: #313131;
+}
+
+.imagenListaDeTareas img {
+  width: 100%;
+  min-height: 60px;
+}
+
+/*Lista de Tareas*/
+.tareas-listas-principal {
+  width: 90%;
+  max-width: 600px;
+  min-height: 500px;
+  background: #2e2626;
+  padding: 25px;
+  margin: 50px auto;
+  border-radius: 25px;
+}
