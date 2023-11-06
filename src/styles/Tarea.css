@@ -1,0 +1,113 @@
+.tarea-container-general {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+}
+
+.tarea-container {
+  max-width: 500px;
+  width: 100%;
+  min-height: 65px;
+  background: #1b1b32;
+  margin: 5px 0 0 0;
+  padding: 8px 15px 8px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 7px 7px 0 0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.tarea-container:nth-child(3n + 1) {
+  background: #1b1b32;
+}
+
+.tarea-container:nth-child(3n + 2) {
+  background: #2a2a40;
+}
+
+.tarea-container:nth-child(3n + 3) {
+  background: #3b3b4f;
+}
+
+.tarea-texto {
+  width: 100%;
+  height: 100%;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.55px;
+  line-height: 0.25px;
+  font-family: "Outfit", sans-serif;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  overflow-wrap: anywhere;
+}
+
+.tarea-icono-close {
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.tarea-container.completada {
+  background: #5a01a7;
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+.fecha-container {
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  flex-direction: column;
+  background: #3b3b4f;
+  border-radius: 0 0 7px 7px;
+  margin-top: -1px;
+  padding: 3px;
+}
+
+.fecha-container.completada {
+  background: #5a01a7;
+}
+
+.texto-tarea-fecha-creacion {
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.55px;
+  text-align: left;
+  color: #ccc;
+  margin-left: 10px;
+  font-family: "Outfit", sans-serif;
+}
+
+.texto-tarea-fecha-completada {
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.55px;
+  text-align: left;
+  color: yellow;
+  font-family: "Outfit", sans-serif;
+}
+
+@media (width < 768px) {
+  .tarea-texto {
+    font-size: 0.85rem;
+    line-height: 20px;
+  }
+
+  .texto-tarea-fecha-creacion {
+    font-size: 0.65rem;
+  }
+
+  .texto-tarea-fecha-completada {
+    font-size: 0.65rem;
+  }
+}

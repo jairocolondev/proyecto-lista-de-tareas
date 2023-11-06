@@ -1,0 +1,48 @@
+.tarea-formulario {
+  display: flex;
+  justify-content: center;
+}
+
+.tarea-input {
+  max-width: 350px;
+  width: 70%;
+  font-size: 1.1rem;
+  background: #ffffff;
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #00471b;
+  outline: none;
+}
+
+.tarea-input:focus {
+  border: 2px solid #00471b;
+}
+
+.tarea-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  background: #00471b;
+  font-family: "Outfit", sans-serif;
+  color: #ffffff;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  padding: 14px 16px;
+  border-radius: 0 4px 4px 0;
+  border: 2px solid #00471b;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@media (width < 768px) {
+  .tarea-input {
+    font-size: 0.85rem;
+  }
+
+  .tarea-button {
+    font-size: 0.85rem;
+    padding: 6px;
+  }
+}
