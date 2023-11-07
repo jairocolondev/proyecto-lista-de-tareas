@@ -17,7 +17,14 @@ const ListaDeTareas = () => {
   const agregarTarea = (tarea) => {
     if (tarea.texto.trim()) {
       tarea.texto = tarea.texto.trim();
-      const tareasActualizadas = [tarea, ...tareas];
+      const nuevaTarea = {
+        ...tarea,
+        fechaCreacion: tarea.fechaCreacion
+          ? tarea.fechaCreacion
+          : new Date().toISOString(),
+        completada: false,
+      };
+      const tareasActualizadas = [nuevaTarea, ...tareas];
       setTareas(tareasActualizadas);
     }
   };
@@ -31,6 +38,7 @@ const ListaDeTareas = () => {
       title: "Tarea eliminada",
       text: "La tarea ha sido eliminada correctamente.",
       showConfirmButton: false,
+      position: "bottom-end",
       timer: 2000,
     });
   };
@@ -38,25 +46,34 @@ const ListaDeTareas = () => {
   const completarTarea = (id) => {
     const tareasActualizadas = tareas.map((tarea) => {
       if (tarea.id === id) {
-        const estadoCompletado = !tarea.completada;
+        tarea.completada = !tarea.completada;
+        tarea.fechaCompletado = tarea.completada
+          ? new Date().toISOString()
+          : null;
         Swal.fire({
           icon: "success",
-          title: estadoCompletado ? "Tarea completada" : "Tarea no completada",
+          title: tarea.completada ? "Tarea completada" : "Tarea no completada",
           text: `La tarea ha sido ${
-            estadoCompletado ? "completada" : "marcada como no completada"
+            tarea.completada ? "completada" : "marcada como no completada"
           } correctamente.`,
           showConfirmButton: false,
+          position: "bottom-end",
           timer: 2000,
         });
-        return {
-          ...tarea,
-          completada: estadoCompletado,
-          fechaCompletado: estadoCompletado ? new Date().toISOString() : null,
-        };
       }
       return tarea;
     });
-    setTareas(tareasActualizadas);
+
+    // Dividir tareas entre completadas y no completadas
+    const tareasNoCompletadas = tareasActualizadas.filter(
+      (tarea) => !tarea.completada
+    );
+    const tareasCompletadas = tareasActualizadas.filter(
+      (tarea) => tarea.completada
+    );
+
+    // Unir primero las no completadas y luego las completadas
+    setTareas([...tareasNoCompletadas, ...tareasCompletadas]);
   };
 
   return (
@@ -69,7 +86,7 @@ const ListaDeTareas = () => {
             id={tarea.id}
             texto={tarea.texto}
             completada={tarea.completada}
-            fechaCreacion={new Date().toISOString()}
+            fechaCreacion={tarea.fechaCreacion}
             fechaCompletado={
               tarea.fechaCompletado ? tarea.fechaCompletado : null
             }

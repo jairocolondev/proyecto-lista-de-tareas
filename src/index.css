@@ -37,18 +37,15 @@ body {
 }
 
 .imagenListaDeTareas {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  font-family: "Outfit", sans-serif;
-  color: #313131;
-}
-
-.imagenListaDeTareas img {
+  background-image: url("./assets/imagenListaDeTareas_desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  max-width: 1500px;
   width: 100%;
-  min-height: 60px;
+  height: 130px;
+  border-radius: 16px;
+  margin-top: -13px;
 }
 
 /*------ Lista de Tareas ------*/
@@ -98,4 +95,37 @@ body {
   border-radius: 16px;
   padding: 5px;
   font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .imagenListaDeTareas {
+    border-radius: 0;
+    margin-top: -31px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-aplicacion-tareas {
+    justify-content: flex-start;
+  }
+
+  .imagenListaDeTareas {
+    background-image: url("./assets/imagenListaDeTareas_mobile.jpg");
+    height: 160px;
+    margin-top: -28px;
+  }
+}
+
+@media (max-width: 500px) {
+  .imagenListaDeTareas {
+    height: 100px !important;
+    margin-top: -11px;
+  }
+}
+
+@media (max-width: 350px) {
+  .imagenListaDeTareas {
+    height: 70px !important;
+    border-radius: 0;
+  }
 }
