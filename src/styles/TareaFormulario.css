@@ -28,6 +28,7 @@
   font-family: "Outfit", sans-serif;
   color: #ffffff;
   font-size: 1.1rem;
+  letter-spacing: 1px;
   text-transform: capitalize;
   padding: 14px 16px;
   border-radius: 0 4px 4px 0;
@@ -35,6 +36,10 @@
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+.tarea-button:hover {
+  background: #01250f;
 }
 
 @media (width < 768px) {

@@ -20,6 +20,7 @@ const TareaFormulario = (props) => {
         title: "Hubo un error...",
         text: "Debes escribir una Tarea para poderla agregar",
         confirmButtonColor: "#3085d6",
+        position: "bottom-end",
       });
     } else {
       const tareaNueva = {
@@ -37,6 +38,7 @@ const TareaFormulario = (props) => {
         icon: "success",
         title: "¡Tarea agregada!",
         showConfirmButton: false,
+        position: "bottom-end",
         timer: 2000,
       });
     }

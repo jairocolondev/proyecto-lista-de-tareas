@@ -18,7 +18,7 @@
   align-items: center;
   border-radius: 7px 7px 0 0;
   border: 1px solid #ccc;
-  cursor: pointer;
+  user-select: none;
 }
 
 .tarea-container:nth-child(3n + 1) {
@@ -54,8 +54,36 @@
   cursor: pointer;
 }
 
+.tarea-icono-close:hover {
+  color: #ff0000;
+}
+
+.tarea-icono-creado {
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.tarea-icono-creado:hover {
+  color: #00ff00;
+}
+
+.tarea-icono-completado {
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+  color: #00ff00;
+  cursor: pointer;
+}
+
+.tarea-icono-completado:hover {
+  color: #ff0000;
+}
+
 .tarea-container.completada {
-  background: #5a01a7;
+  background: #095e09;
   text-decoration: line-through;
   color: #ccc;
 }
@@ -71,10 +99,11 @@
   border-radius: 0 0 7px 7px;
   margin-top: -1px;
   padding: 3px;
+  user-select: none;
 }
 
 .fecha-container.completada {
-  background: #5a01a7;
+  background: #095e09;
 }
 
 .texto-tarea-fecha-creacion {
@@ -82,7 +111,7 @@
   font-weight: 400;
   letter-spacing: 0.55px;
   text-align: left;
-  color: #ccc;
+  color: #ffffff;
   margin-left: 10px;
   font-family: "Outfit", sans-serif;
 }
@@ -92,11 +121,15 @@
   font-weight: 400;
   letter-spacing: 0.55px;
   text-align: left;
-  color: yellow;
+  color: #ffffff;
   font-family: "Outfit", sans-serif;
 }
 
 @media (width < 768px) {
+  .tarea-container {
+    padding: 5px 10px;
+  }
+
   .tarea-texto {
     font-size: 0.85rem;
     line-height: 20px;

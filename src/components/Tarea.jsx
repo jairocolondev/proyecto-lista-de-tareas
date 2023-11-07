@@ -1,5 +1,9 @@
 import PropTypes from "prop-types";
-import { AiOutlineCloseCircle } from "react-icons/ai";
+import {
+  AiOutlineCloseCircle,
+  AiOutlineCheck,
+  AiOutlineCheckCircle,
+} from "react-icons/ai";
 import "../styles/Tarea.css";
 
 const Tarea = ({
@@ -31,9 +35,17 @@ const Tarea = ({
           completada ? "tarea-container completada" : "tarea-container"
         }
       >
-        <div className="tarea-texto" onClick={() => completarTarea(id)}>
-          {texto}
+        <div
+          className="tarea-container-iconos"
+          onClick={() => completarTarea(id)}
+        >
+          {completada ? (
+            <AiOutlineCheck className="tarea-icono-completado" />
+          ) : (
+            <AiOutlineCheckCircle className="tarea-icono-creado" />
+          )}
         </div>
+        <div className="tarea-texto">{texto}</div>
         <div
           className="tarea-container-iconos"
           onClick={() => eliminarTarea(id)}
