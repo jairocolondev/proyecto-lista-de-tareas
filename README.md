@@ -1,6 +1,7 @@
 # Aplicación de Lista de Tareas con React y Vite
 
-![image](https://github.com/jairocolondev/proyecto-lista-de-tareas/assets/83477127/6dbc05fe-42f9-4031-80bc-66c4e6cd4913)
+![image](https://github.com/jairocolondev/proyecto-lista-de-tareas/assets/83477127/f4ae44da-175d-42e4-9827-b24974c3e945)
+
 
 Este proyecto es una aplicación de lista de tareas desarrollada con React y Vite. Permite a los usuarios agregar, completar y eliminar tareas de una lista. La aplicación también usa `localStorage` para mantener las tareas persistentes entre las sesiones del navegador.
 
