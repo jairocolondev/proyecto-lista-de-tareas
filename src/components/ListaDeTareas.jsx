@@ -79,7 +79,9 @@ const ListaDeTareas = () => {
   return (
     <>
       <div className="container__titulo-lista-tareas">
-        <h1 className="titulo-lista-tareas">Lista de tareas</h1>
+        <h1 className="titulo-lista-tareas">
+          Lista de tareas Simonaaaaaaaaaaaaaaa
+        </h1>
       </div>
       <TareaFormulario onSubmit={agregarTarea} />
       <div className="tareas-lista-container">
